@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ian.dev</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="description" content="Desarrollador Frontend">
+    <meta name="keywords" content="desarrollo web, desarrollador frontend, html, css, javascript">
+    <meta name="author" content="Ian Kibel">
 </head>
+
 <body>
     
-    <header>
+    <!-- HEADER -->
+    <header id="header">
         <h1>Ian.dev</h1>
         <nav class="nav-menu">
-            <button class="open-menu"><ion-icon name="menu"></ion-icon></button>
-
-            <div class="menu-desktop hidden">
+            <button class="open-menu" id="open-aside">
+                <ion-icon name="menu"></ion-icon> <!-- Icono menu -->
+            </button>            
+            <!-- <div class="menu-desktop hidden">
                 <ul>
                     <li>Home</li>
                     <li>About</li>
                     <li>Projects</li>
                     <li>Contact</li>
                 </ul>
-            </div>
+            </div> -->
         </nav>
     </header>
+
+    <!-- ASIDE -->
+    <aside class="aside-menu" id="aside">
+        <nav class="aside-nav">
+            <div class="aside-options">
+                <ul>
+                    <li><button>
+                        <ion-icon name="language-outline"></ion-icon> <!-- Icono language -->
+                    </button></li>
+                    <li><button>
+                        <ion-icon name="contrast-outline"></ion-icon> <!-- Icono dark mode -->
+                    </button></li>
+                </ul>
+                <button type="button" id="close-aside">
+                    <ion-icon name="close-circle-outline"></ion-icon> <!-- Icono cerrar -->
+                </button>
+            </div>
+            
+            <ul class="aside-main" aria-label="Menu Aside">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul class="aside-social">
+                <li><a href="https://www.linkedin.com/in/iankibel/">
+                    <ion-icon name="logo-linkedin"></ion-icon> <!-- Icono cerrar -->
+                </a></li>
+                <li><a href="https://github.com/iankibel">
+                    <ion-icon name="logo-github"></ion-icon> <!-- Icono github -->
+                </a></li>
+                <li><a href="mailto:ian.kibel@gmail.com">
+                    <ion-icon name="logo-google"></ion-icon> <!-- Icono google -->
+                </a></li>
+                <li><a href="https://www.instagram.com/ian.kibel/">
+                    <ion-icon name="logo-instagram"></ion-icon> <!-- Icono instagram -->
+                </a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!--  -->
 
 
 

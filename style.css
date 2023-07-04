@@ -1,27 +1,32 @@
+/* Importacion de fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* Definicion de variables */
 :root {
     --ff-montserrat: 'Montserrat', sans-serif;
     --ff-courier: 'Courier Prime', monospace;
-    --clr-bg: ;
+    --clr-bg: #ffffff;
     --clr-text: ;
-    --clr-det: ;
+    --clr-det: #038378;
     --clr-light-shadow: #808080;
 }
 
+/* Estilos generales */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: var(--ff-montserrat);
-    border: .5px red dotted;
+    /* outline: .5px red dotted; */
     text-decoration: none;
+    list-style-type: none;
 }
 
 .hidden {
     display: none;
 }
 
+/* Header */
 header {
     display: flex;
     width: 100%;
@@ -29,7 +34,6 @@ header {
     top: 0;
     left: 0;
     position: fixed;
-    /* background-color: rebeccapurple; */
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
@@ -37,7 +41,6 @@ header {
 }
 
 header h1 {
-    /* width: 100%; */
     font-size: 2rem;
     font-family: 'Courier Prime', monospace;;
     font-weight: 700;
@@ -51,12 +54,77 @@ header h1 {
     font-size: 2rem;
     align-items: center;
     background: transparent;
+    cursor: pointer;
 }
 
-.menu-desktop ul{
+/* Aside */
+
+.aside-menu {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    /* background: linear-gradient(to left, #ffffff, #ffffff); */
+    background: var(--clr-bg);
+    padding: 2rem;
+    transform: translateX(-100%);
+    transition: all 300ms;
+}
+
+.aside-menu.active {
+    transform: translateX(0);
+}
+
+.aside-nav {
     display: flex;
-    list-style-type: none;
-    gap: 1rem;
-    font-size: 1rem;
-    font-weight: 500
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.aside-options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.aside-options ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.aside-nav button {
+    background-color: transparent;
+    border: none;
+    padding: .5rem;
+    font-size: 2.5rem;
+    display: flex;
+    cursor: pointer;
+    color: var(--clr-det);
+}
+
+.aside-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.aside-main a {
+    color: var(--clr-det);
+}
+
+.aside-social {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    gap: 1.5rem;
+}
+
+.aside-social a {
+    color: var(--clr-det);
 }

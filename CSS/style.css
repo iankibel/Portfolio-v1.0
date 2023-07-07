@@ -20,10 +20,30 @@
     --font-ubuntu: 'Ubuntu', sans-serif;
 }
 
-/* DARK THEME */
-/* [data-theme="dark"] {
+/* DATA THEMES */
+[data-theme="light"] {
+    --clr-bg: #f0f0f0;
+    --clr-grey: #808080;
+    --clr-det: #038378;
+    --clr-det-light: #4da59e;
+    --clr-det-lighter: #84c0bb;
+    --clr-det-lighterer: #adcfcc;
+    --clr-text: #1b1b1b;
+    --clr-shadow: #000000;
+    --clr-lighter-grey: #e0e0e0af;
+}
 
-} */
+[data-theme="dark"] {
+    --clr-bg: #1b1b1b;
+    --clr-grey: #808080;
+    --clr-det: #038378;
+    --clr-det-light: #0f6962;
+    --clr-det-lighter: #154b46;
+    --clr-det-lighterer: #192c2b;
+    --clr-text: #999999;
+    --clr-shadow: #000000;
+    --clr-lighter-grey: #292929af;
+}
 
 /* GENERAL STYLES */
 * {
@@ -80,7 +100,7 @@ body {
     top: 0;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(to bottom, #ffffff, #ffffffe8);
+    background: linear-gradient(to bottom, var(--clr-bg), var(lighter-grey));
     transition: all 300ms ease-in-out;
     transform: translateX(-100%);
     z-index: 99;
@@ -117,6 +137,10 @@ body {
     color: var(--clr-text);
 }
 
+.top-aside-left a {
+    color: var(--clr-text);
+}
+
 .aside-main {
     display: flex;
     flex-direction: column;
@@ -126,6 +150,12 @@ body {
     color: var(--clr-text);
     list-style-type: none;
     margin-top: 12rem;
+}
+
+.aside-main li button {
+    border: 0;
+    background: transparent;
+    font-size: 2.5rem;
 }
 
 .aside-main li a{
@@ -163,7 +193,7 @@ body {
 
 .hero {
     height: 95vh;
-    padding-top: 5rem;
+    padding-top: 2rem;
     z-index: 1;
 }
 
@@ -174,6 +204,7 @@ body {
     flex-wrap: wrap;
     padding-block: 5rem;
     text-align: center;
+    color: var(--clr-text);
 }
 
 .name {
@@ -194,6 +225,7 @@ body {
 .hero-info p {
     width: 70%;
     text-align: center;
+    color: var(--clr-text);
 }
 
 .hero-contact {
@@ -219,6 +251,7 @@ body {
     font-weight: 700;
     color: var(--clr-text);
     padding: 2rem 0 1rem 2rem;
+    margin-top: 2rem;
 }
 
 .title-section::before {
@@ -240,6 +273,7 @@ body {
     padding: 2rem;
     padding-top: 0;
     text-align: center;
+    color: var(--clr-text);
 }
 
 .about-me-linked {
@@ -290,6 +324,7 @@ body {
     flex-direction: column;
     padding: 0 2rem 2rem 2rem;
     gap: 1rem;
+    color: var(--clr-text);
 }
 
 .skill-cat-info {
@@ -321,6 +356,7 @@ body {
 .portfolio-intro {
     padding: 2rem;
     padding-top: 0;
+    color: var(--clr-text);
 }
 
 .projects {
@@ -338,6 +374,7 @@ body {
     flex-direction: column;
     padding: 2rem;
     border-radius: 2rem;
+    color: var(--clr-text);
 }
 
 .project-icons {
@@ -384,6 +421,11 @@ body {
     cursor: pointer;
 }
 
+.project-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 
 /* CONTACT */
@@ -393,6 +435,7 @@ body {
     flex-direction: column;
     justify-content: center;
     font-weight: 700;
+    color: var(--clr-text);
 }
 
 .contact h3 {
@@ -475,7 +518,7 @@ body {
 
 .btn-back-top a {
     font-size: 3rem;
-    background-color: var(--clr-lighter-grey);
+    background-color: var(--clr-det);
     padding-block: 1.5rem;
     padding-inline: 1.7rem;
     border-radius: 500vmax;
@@ -508,6 +551,7 @@ footer {
     var(--clr-det-lighter),
     var(--clr-det-lighterer),
     var(--clr-bg));
+    color: #1b1b1b;
 }
 
 .footer-menu {
@@ -518,13 +562,12 @@ footer {
 }
 
 .footer-menu a {
-    color: var(--clr-text);
+    color: #1b1b1b;
 }
 
 .footer h2 {
-    color: var(--clr-text);
     font-size: 2.5rem;
-}
+} 
 
 
 
